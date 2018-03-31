@@ -10,6 +10,7 @@ var {User} = require('./models/user');
 
 <!-- initializing app -->
 var app = express();
+const port = process.env.PORT || 3000;
 
 <!-- bodyparser to convert json using middleware -->
 app.use(bodyParser.json());
@@ -57,8 +58,8 @@ app.get('/todos/:id', (req, res) => {
 
 });
 
-app.listen(3000, () => {
-  console.log('Started on port 3000');
+app.listen(port, () => {
+  console.log(`Started up on port ${port}`);
 });
 
 module.exports = {app};
