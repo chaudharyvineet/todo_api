@@ -1,3 +1,4 @@
+require('./config/config');
 <!-- requiring libraries -->
 const _ = require('lodash');
 const {ObjectID} = require('mongodb');
